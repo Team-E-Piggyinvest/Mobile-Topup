@@ -154,14 +154,42 @@ background: linear-gradient(174deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba
                         
                     <div class="col-auto mx-auto countryDisplayElement collapse show mt-3 pb-md-5">
                         <div class="col-12 col-md-8 col-xl-6 input-group mx-auto">
+                                 <h5 class="font-weight-bold my-0"><label for="phone">Select You Service Provider</label></h5>
+                                    <select class="input-group-text text-black" style="background-color: #E8E8E8; height: 40px; width: 300px;" id="js-prefix">
+                                            <option value="">-- select network  --</option>
+                                            <option value="10">MTN</option>
+                                            <option value="20">GLO</option>
+                                            <option value="30">Airtel</option>
+                                            <option value="40">9 Mobile </option>
+                                        </select>
+                                 
                                 <h5 class="font-weight-bold my-0"><label for="phone">Enter Your Phone number Below to top up</label></h5>
                         
                             <div class="input-group-prepend">
-                                <div class="input-group-text text-white" style="background-color: #1073f5;" id="js-prefix">+234</div>
+                                <!--<span class="input-group-text text-white" style="background-color: #1073f5;" id="js-prefix">-->
+                                    <span class="input-group-text text-white" style="background-color: #1073f5; border: 2px solid #1073f5;" id="js-prefix"> +234</span>
+                            <span>
+                                <input type="text" class="input-group-text" style="height: 40px; width: 160px;">
+                            </span>
                             </div>
-                            <input type="tel" class="form-control" id="phone">
+
+                            
+                            <!--<input type="tel" class="form-control" id="phone">-->
+                        <form action="">
+                            <label for=""> <h5 class="font-weight-bold my-0"> How much? </h5> </label>
+                            <input type="text" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" name="amount" placeholder="Enter amount" class="input-group-text" style="width: 225px; height: 40px;">
+                            
+                            <label for="" class="font-weight-bold my-0"> <h5 class="font-weight-bold my-0"> How do you want to pay? </h5> </label>
+                            <select class="input-group-text text-black" style="background-color: #E8E8E8; height: 40px; width: 225px;" id="js-prefix">
+                                        <option value="">-- select option  --</option>
+                                        <option value="10">Online Banking</option>
+                                        <option value="20">Flutterwave</option>
+                                        <option value="30">Palmpay</option>
+                                        <option value="40"> Quick Teller </option>
+                                    </select>
+                        </form>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-auto" style="text-align: center;">
                             <button id="phone-btn" type="button" class="btn btn-primary mt-3">
                                 <span id="phone-submit-spinner" class="spinner-grow spinner-grow-sm text-light" role="status"
                                       style="display: none;">&nbsp;</span>
