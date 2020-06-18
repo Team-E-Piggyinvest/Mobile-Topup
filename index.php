@@ -32,7 +32,7 @@
         <style>
             .bg-gradient {
                 background: rgb(2,0,36);
-background: linear-gradient(174deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba(0,212,255,1) 100%);
+background: linear-gradient(174deg, rgb(255,255,0) 25%, #F0F8FF 25%, rgb(0,0,255) 65%,  rgb(255,0,0) 50%);
             }
 
             @media (min-width: 481px) {
