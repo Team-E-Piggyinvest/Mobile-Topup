@@ -76,7 +76,11 @@ background: linear-gradient(174deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba
                 aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav ml-auto">
+              <li><a class="nav-link text-primary" href="login.html">Login</a></li>
+            </ul>
+        </div>
     </nav>
 
 
@@ -153,7 +157,8 @@ background: linear-gradient(174deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba
                             
                         
                     <div class="col-auto mx-auto countryDisplayElement collapse show mt-3 pb-md-5">
-                        <div class="col-12 col-md-8 col-xl-6 input-group mx-auto">
+
+                        <div class="col-12 col-md-8 col-xl-6 input-group mx-auto" style="margin: 5px;">
                                 <h5 class="font-weight-bold my-0"><label for="phone">Enter Your Phone number Below to top up</label></h5>
                         
                             <div class="input-group-prepend">
@@ -161,8 +166,9 @@ background: linear-gradient(174deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba
                             </div>
                             <input type="tel" class="form-control" id="phone">
                         </div>
-                        <div class="col-auto">
-                            <button id="phone-btn" type="button" class="btn btn-primary mt-3">
+
+                        <div class="col-auto text-center">
+                            <button id="phone-btn" type="button" class="btn btn-primary mt-3 ">
                                 <span id="phone-submit-spinner" class="spinner-grow spinner-grow-sm text-light" role="status"
                                       style="display: none;">&nbsp;</span>
                                 <span>Recharge</span>&nbsp;
@@ -171,7 +177,7 @@ background: linear-gradient(174deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba
                             
                         </div>
                     </div>
-                    <div id="phone-error-div" class="alert alert-warning mt-3 js-err-msg-phone" style="display: none;" align="center">
+                    <div id="phone-error-div" class="alert alert-warning mt-3 js-err-msg-phone text-center" style="display: none;" align="center">
                         <span>Your phone number seems incorrect. Please enter a phone number with</span>
                         <span id="js-nb-digits">?</span>
                         <span>digits.</span>
