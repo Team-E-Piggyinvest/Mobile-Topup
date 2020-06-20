@@ -78,10 +78,31 @@ background: linear-gradient(174deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba
         <a class="navbar-brand" href="index.html">
             <p>Mobile Top Up</p>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar"
                 aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Service providers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">SignIn</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#">
+                                <i class="fa fa-user"></i>SignUp
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.html"><i class="fa fa-user"></i>TeamE</a>
+                        </li>
+                    </ul>
+                 </div>
         
     </nav>
 
@@ -158,59 +179,58 @@ background: linear-gradient(174deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba
                                    
                             
                         
-                    <div class="col-auto mx-auto countryDisplayElement collapse show mt-3 pb-md-5">
-                        <form action="" method="POST">
-                            <div class="col-12 col-md-8 col-xl-6 input-group mx-auto">
-                                    <h5 class="font-weight-bold my-0"><label for="phone">Enter Your Phone number Below to top up</label></h5>
-                            
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text text-white" style="background-color: #1073f5;" id="js-prefix">+234</div>
-                                </div>
-                                <input type="tel" name="phone_number" class="form-control" id="phone">
-                            </div>
-                            <div class="col-12 col-md-8 col-xl-6 input-group mx-auto">
-                                    <h5 class="font-weight-bold my-0"><label for="phone">Enter Your Amount</label></h5> <br>
-                            
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text text-hite"  ></div> 
-                                </div> 
-                                <input type="text" name="amount" class="form-control" id="phone">
-                            </div>
-                            <div class="col-12 col-md-8 col-xl-6 input-group mx-auto">
-                                <h5 class="font-weight-bold my-0"><label for="phone">Enter Network</label></h5>
-                                <div class="form-group drop-custum">
-                                        <select class="form-control show-tick" name="airtime_network">
-                                            <option value="">-- Network --</option>
-                                            <option value="MTN">MTN </option>
-                                            <option value="Airtel">Airtel </option>
-                                            <option value="GLO">GLO </option>
-                                            <option value="Etisalat">Etisalat </option>
-
+                     <div class="col-auto mx-auto countryDisplayElement collapse show mt-3 pb-md-5">
+                        <div class="col-12 col-md-8 col-xl-6 input-group mx-auto">
+                                 <h5 class="font-weight-bold my-0"><label for="phone">Select You Service Provider</label></h5>
+                                    <select class="input-group-text text-black" style="background-color: #E8E8E8; height: 40px; width: 300px;" id="js-prefix">
+                                            <option value="">-- select network  --</option>
+                                            <option value="10">MTN</option>
+                                            <option value="20">GLO</option>
+                                            <option value="30">Airtel</option>
+                                            <option value="40">9 Mobile </option>
                                         </select>
-                                    </div>
-
+                                 
+                                <h5 class="font-weight-bold my-0"><label for="phone">Enter Your Phone number Below to top up</label></h5>
+                        
+                            <div class="input-group-prepend">
+                                <!--<span class="input-group-text text-white" style="background-color: #1073f5;" id="js-prefix">-->
+                                    <span class="input-group-text text-white" style="background-color: #1073f5; border: 2px solid #1073f5;" id="js-prefix"> +234</span>
+                            <span>
+                                <input type="text" class="input-group-text" style="height: 40px; width: 160px;">
+                            </span>
                             </div>
-                            <div class="col-auto">
-                                <!-- <button id="phone-btn" name="recharge" value="submit" type="button" class="btn btn-primary mt-3">
-                                    <span id="phone-submit-spinner" class="spinner-grow spinner-grow-sm text-light" role="status"
-                                        style="display: none;">&nbsp;</span>
-                                    <span>Recharge</span>&nbsp;
-                                    <span><i class="fas fa-chevron-circle-right"></i></span>
-                                </button> -->
-                                
-                                <input type="submit" name="recharge" value="submit">
 
-
-                            </div>
+                            
+                            <!--<input type="tel" class="form-control" id="phone">-->
+                        <form action="">
+                            <label for=""> <h5 class="font-weight-bold my-0"> How much? </h5> </label>
+                            <input type="text" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" name="amount" placeholder="Enter amount" class="input-group-text" style="width: 225px; height: 40px;">
+                            
+                            <label for="" class="font-weight-bold my-0"> <h5 class="font-weight-bold my-0"> How do you want to pay? </h5> </label>
+                            <select class="input-group-text text-black" style="background-color: #E8E8E8; height: 40px; width: 225px;" id="js-prefix">
+                                        <option value="">-- select option  --</option>
+                                        <option value="10">Online Banking</option>
+                                        <option value="20">Flutterwave</option>
+                                        <option value="30">Palmpay</option>
+                                        <option value="40"> Quick Teller </option>
+                                    </select>
                         </form>
+                        </div>
+                        <div class="col-auto" style="text-align: center;">
+                            <button id="phone-btn" type="button" class="btn btn-primary mt-3">
+                                <span id="phone-submit-spinner" class="spinner-grow spinner-grow-sm text-light" role="status"
+                                      style="display: none;">&nbsp;</span>
+                                <span>Recharge</span>&nbsp;
+                                <span><i class="fas fa-chevron-circle-right"></i></span>
+                            </button>
+                            
+                        </div>
                     </div>
                     <div id="phone-error-div" class="alert alert-warning mt-3 js-err-msg-phone" style="display: none;" align="center">
                         <span>Your phone number seems incorrect. Please enter a phone number with</span>
                         <span id="js-nb-digits">?</span>
                         <span>digits.</span>
                     </div>
-                </div>
-            </div>
             
         </div>
     </div>
